@@ -11,10 +11,10 @@ class ListTodosEvent extends TodoEvent {
 }
 
 class CreateTodosEvent extends TodoEvent {
-  final Todo todo;
-  CreateTodosEvent({required this.todo});
+  final String title;
+  CreateTodosEvent({required this.title});
   @override
-  List<Object> get props => [todo];
+  List<Object> get props => [title];
 }
 
 class DeleteTodosEvent extends TodoEvent {
