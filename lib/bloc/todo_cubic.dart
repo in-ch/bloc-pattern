@@ -1,7 +1,8 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:bloc_pattern/bloc/todo_state.dart';
 import 'package:bloc_pattern/model/todo.dart';
 import 'package:bloc_pattern/repository/todo_repository.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class TodoCubit extends Cubit<TodoState> {
   final TodoRepository repository;
@@ -71,7 +72,7 @@ class TodoCubit extends Cubit<TodoState> {
             .todos
             .where((item) => item.id != todo.id)
             .toList();
-
+        print(todo.id);
         emit(Loaded(todos: newTodos));
 
         await repository.deleteTodo(todo);

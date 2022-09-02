@@ -1,9 +1,9 @@
 // ignore_for_file: library_private_types_in_public_api
 
-import 'package:bloc_pattern/bloc/todo_cubic.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'package:bloc_pattern/bloc/todo_cubic.dart';
 import 'package:bloc_pattern/bloc/todo_state.dart';
 import 'package:bloc_pattern/repository/todo_repository.dart';
 
@@ -33,7 +33,6 @@ class HomeWidget extends StatefulWidget {
 
 class _HomeWidgetState extends State<HomeWidget> {
   String title = '';
-
   @override
   void initState() {
     super.initState();
@@ -114,6 +113,5 @@ class _HomeWidgetState extends State<HomeWidget> {
         ),
       ),
     );
-    // return Container();
   }
 }
